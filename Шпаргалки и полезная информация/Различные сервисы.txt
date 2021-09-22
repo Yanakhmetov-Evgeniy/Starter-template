@@ -1,0 +1,16 @@
+Шпаргалка по FLEXBOX // «Фрилансер по жизни»
+https://fls.guru/flexbox.html
+
+Шпаргалка по Emmet 
+https://docs.emmet.io/cheat-sheet/
+
+шпаргался название для классов
+https://tpverstak.ru/common-css-class-names/
+
+Где и как брать иконки
+https://boxicons.com/
+
+где трансформировать скаченные шрифты
+https://transfonter.org/
+
+как вставлять случайные картинки

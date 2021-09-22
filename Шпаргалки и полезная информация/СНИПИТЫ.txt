@@ -1,0 +1,51 @@
+	"Adaptive Font Size": {
+		"scope": "css, scss",
+		"prefix": "fzmix",
+		"body": [
+			"@include mixins.adaptive-font(\\$f-size_${1:})"
+		],
+		"description": "Adaptive Font Size"
+	}
+
+
+	"Background": {
+		"scope": "css,scss",
+		"prefix": "bgmix",
+		"body": [
+         "background: #fff url(../img/${2:}) 50% 50% / cover no-repeat;"
+         "${1:// цвет, адрес, позиционирование, размер, повторение.}"
+		],
+		"description": "Log output to console"
+	}
+
+
+	"FlexBox mixins": {
+		"scope": "css, scss",
+		"prefix": "flexmix",
+		"body": [
+         "@include mixins.flex(center, ${1:space-between});"
+      ],
+      "description": "Flex mixins"
+   }
+
+
+	"Media adaptive": {
+		"scope": "css, scss",
+		"prefix": "mediamix",
+		"body": [
+         " @include mixins.adaptive(${2:}) {"
+         "} ${1://lg=992, md=768, sm=576, null=320}"
+      ],
+      "description": "Adaptive"
+   }
+
+
+	"Positions mixins": {
+		"scope": "css, scss",
+		"prefix": "posmix",
+		"body": [
+         "@include mixins.position(${1:absolute}, ${2:}, ${3:});"
+         "${4:// 1-left, 2-top, 3-right, 4-bottom}"
+       ],
+       "description": "Adaptive"
+      }

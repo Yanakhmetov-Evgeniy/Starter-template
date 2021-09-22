@@ -1,0 +1,13 @@
+Settings Sync плагин где сохраненны все мои настройки редактора кода со всеми плагинами
+
+
+auto complete teg
+bem helper
+css navigation ecsstractor 
+image preview
+live sass compiler
+liv server
+russ
+scss formatter
+scss ontellisense
+vscode google translate

@@ -1,0 +1,27 @@
+@use 'fonts'; //шрифты
+@use 'reset'; //каскадное обнуление
+@use 'varibles' as *; //
+@use 'mixins'; // миксины
+
+
+html, body {
+   font-family: sans-serif; //симейство шрифта по умолчанию
+   font-size: 14px; //размер шрифта по умолчания
+   color: black; //цвет шрифта по умолчанию
+}
+
+.container {
+   max-width: 1170px + 30; // размер контейнера
+   margin-inline: auto;
+   padding-inline: 15px;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+.main {
+   flex: 1 1 auto;
+}
+

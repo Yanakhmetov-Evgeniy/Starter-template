@@ -1,0 +1,4 @@
+features - особенности
+advantages - приимущества
+feature - характерная черта
+furniture - мебель
