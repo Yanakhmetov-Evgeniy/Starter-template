@@ -1,0 +1,40 @@
+//  Семейство шрифтов ********************************
+$fontfamily-Pt-sans: 'PT Sans', sans-serif;
+$fontfamily-Playfair-display: 'Playfair Display', serif;
+
+//  Толщина шрифта ***********************************
+$fontWeightRegular:400;
+$fontWeightMedium:500;
+$fontWeightSemiBold:600;
+$fontWeightold:700;
+
+//  Размер шрифта ************************************
+
+//  Статический размер 
+$fontSize12: 12px;
+$fontSize14: 14px;
+$fontSize16: 16px;
+$fontSize18: 18px;
+//  Адаптивный размер
+$adaptiveFontSize22: 22; 
+$adaptiveFontSize24: 24;
+$adaptiveFontSize36: 36;
+$adaptiveFontSize64: 64;
+
+// Цвета шрифта **************************************
+$fontColorBlack: rgb(0, 0, 0);
+$fontColorWhite: rgb(255, 255, 255);
+$fontColorTransparent: transparent;
+
+// Остальные цвета ***********************************
+$colorBlack: rgb(0, 0, 0);
+$colorWhite: rgb(255, 255, 255);
+$colorTransparent: transparent;
+
+// Контейнер *****************************************
+$containerSize: 1110;
+$maxWidth: 1920;
+
+
+
+

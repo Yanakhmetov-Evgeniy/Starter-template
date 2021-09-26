@@ -1,0 +1,118 @@
+@use 'varibles' as *;
+
+// АДАПТИВ ******************************
+$screens: (
+   "xxl": 1400,
+   "xl":	1200,
+   "lg": 992,
+   "md": 768,
+   "sm": 576,
+   null: 360,
+);
+@mixin adaptive($screen: null){
+   @each $name, $size in $screens{
+      @if($screen == $name){
+         @media screen and (max-width: #{$size + px}){
+            @content;
+         }
+      }
+   }
+}
+// $screensList: (
+//    "xxl": 1400,
+//    "xl":	1200,
+//    "lg": 992,
+//    "md": 768,
+//    "sm": 576,
+//    "s": 360
+// );
+// $actionList: (
+//    "up": min-width,
+//    null: max-width
+// );
+// @mixin adaptive($screen: null, $action: null){
+//    @each $screenName, $screenSize in $screensList{
+//       @if($screen == $screenName){
+//          @each $actionName, $actionValue in $actionList{    
+//             @if($action == $actionName){
+//                @media screen and (#{$actionValue}: #{$screenSize + px}){
+//                   @content;
+//                }
+//             }
+//          }
+//       }
+//    }
+// }
+// АДАПТИВ ******************************
+
+// ПОЗИЦИОНИРОВАНИН *********************
+@mixin position($position, $top, $left, $bottom: null, $right: null){
+   position: $position;
+   top: $top;
+   left: $left;
+   bottom: $bottom;
+   right: $right;
+}
+// ПОЗИЦИОНИРОВАНИН **********************
+
+// ФЛЕКСЫ ********************************
+@mixin flex($align: null, $justify: null, $direction: null, $wrap: null){
+   display: flex;
+   align-items: $align;
+   justify-content: $justify;
+   flex-direction: $direction;
+   flex-wrap: $wrap;
+}
+// ФЛЕКСЫ ********************************
+
+// АДАПТИВНЫЙ ШРИФТ **********************
+// @mixin adaptive-font($pcSize, $mobSize: null){
+//    @if ($pcSize <= 20) {
+//       $mobSize: 18;
+//    } @else if (($pcSize > 20) and ($pcSize <= 24)) {
+//       $mobSize: 20;
+//    } @else if (($pcSize > 24) and ($pcSize <= 32)) {
+//       $mobSize: 22;
+//    } @else if (($pcSize > 32) and ($pcSize <= 50)) {
+//       $mobSize: 24;
+//    } @else if ($pcSize > 50) {
+//       $mobSize: 26;
+//    }
+//    $addSize: $pcSize - $mobSize;
+//    // $addMobSize: $addSize + $addSize * 0.7;
+//    font-size: #{$pcSize + px};
+//    @media (max-width: #{$containerSize + px}) {
+//       font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$containerSize - 320}));
+//    }
+//    // @media (min-width: 767px) {
+//    //    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));      
+//    // }
+// } 
+
+$nameWidthSize: (
+   "maxWidth": $maxWidth,
+   null: $containerSize
+);
+@mixin adaptiveFontSize($pcSize, $widthSize: null,  $mobSize: null){
+   @if ($pcSize <= 20) {
+      $mobSize: 18;
+   } @else if (($pcSize > 20) and ($pcSize <= 24)) {
+      $mobSize: 20;
+   } @else if (($pcSize > 24) and ($pcSize <= 32)) {
+      $mobSize: 22;
+   } @else if (($pcSize > 32) and ($pcSize <= 50)) {
+      $mobSize: 24;
+   } @else if ($pcSize > 50) {
+      $mobSize: 26;
+   }
+   $addSize: $pcSize - $mobSize;
+   @each $key, $value in $nameWidthSize {
+      @if($widthSize == $key){
+         font-size: #{$pcSize + px};
+         @media (max-width: #{$value + px}) {
+             font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$value - 320}));
+         }
+      }
+   }
+}
+
